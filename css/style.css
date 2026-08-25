@@ -21,6 +21,13 @@
     --glow: 0 0 20px rgba(187, 0, 255, 0.5);
     --font-main: 'Outfit', sans-serif;
     --transition: all 0.3s ease;
+    
+    --feature-bg: #111;
+    --feature-inner-bg: #0f0f0f;
+    --icon-box-bg: rgba(255, 255, 255, 0.03);
+    --hover-bg: rgba(255, 255, 255, 0.1);
+    --hero-shadow: 0 0 20px rgba(187, 0, 255, 0.6);
+    --hero-title-color: var(--text-main);
 }
 
 /* Light Theme Overrides */
@@ -37,6 +44,13 @@ body.light-theme {
     --secondary: #008c8e;
     /* Darker teal for contrast */
     --accent: #c400c7;
+    
+    --feature-bg: #ffffff;
+    --feature-inner-bg: #f9f9f9;
+    --icon-box-bg: rgba(0, 0, 0, 0.03);
+    --hover-bg: rgba(0, 0, 0, 0.05);
+    --hero-shadow: 0 4px 15px rgba(187, 0, 255, 0.2);
+    --hero-title-color: #000000;
 }
 
 /* Reset & Global */
@@ -217,8 +231,7 @@ a {
 
 /* Glassmorphism */
 .glass {
-    background: rgba(10, 10, 10, 0.85);
-    /* Slightly darker for better readability */
+    background: var(--glass-bg);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--glass-border);
@@ -244,13 +257,20 @@ a {
 /* Navigation */
 .navbar {
     position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 15px 5%;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 92%;
+    max-width: 1100px;
+    padding: 12px 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
+    border-radius: 50px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--glass-border);
+    transition: all 0.4s ease;
 }
 
 .logo {
@@ -266,29 +286,54 @@ a {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 25px;
+    gap: 20px;
+    align-items: center;
 }
 
-.nav-links li a {
-    font-weight: 400;
+.nav-links li a.nav-item {
+    font-weight: 500;
     position: relative;
-    padding: 5px 0;
+    padding: 8px 12px;
     font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    background: transparent;
+    transition: all 0.4s ease;
 }
 
-.nav-links li a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--secondary);
-    transition: width 0.3s;
+.nav-links li a.nav-item::after {
+    display: none;
 }
 
-.nav-links li a:hover::after {
-    width: 100%;
+.nav-item i {
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-item .nav-text {
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    opacity: 0;
+    transition: max-width 0.4s ease, opacity 0.3s ease, margin-left 0.4s ease;
+}
+
+.nav-item:hover {
+    background: var(--hover-bg);
+    box-shadow: 0 4px 15px rgba(0, 219, 222, 0.1);
+}
+
+.nav-item:hover i {
+    color: var(--secondary);
+    transform: scale(1.1);
+}
+
+.nav-item:hover .nav-text {
+    max-width: 100px;
+    opacity: 1;
+    margin-left: 10px;
+    color: var(--text-main);
 }
 
 .btn-nav {
@@ -364,7 +409,8 @@ a {
     font-size: 3rem;
     line-height: 1.1;
     margin-bottom: 10px;
-    text-shadow: 0 0 20px rgba(187, 0, 255, 0.6);
+    text-shadow: var(--hero-shadow);
+    color: var(--hero-title-color);
 }
 
 @media (min-width: 768px) {
@@ -375,7 +421,7 @@ a {
 
 .subtitle {
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 500;
     margin-bottom: 15px;
 }
 
@@ -770,7 +816,7 @@ a {
     position: relative;
     padding: 30px;
     text-align: center;
-    background: #111;
+    background: var(--feature-bg);
     /* Dark background */
     border-radius: 20px;
     overflow: hidden;
@@ -949,7 +995,7 @@ a {
     position: absolute;
     inset: 2px;
     /* Border thickness */
-    background: #0f0f0f;
+    background: var(--feature-inner-bg);
     /* Match card bg */
     border-radius: 18px;
     z-index: -1;
@@ -981,14 +1027,14 @@ a {
 .icon-box {
     width: 60px;
     height: 60px;
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--icon-box-bg);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
     transition: all 0.4s ease;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
     position: relative;
     z-index: 2;
 }
@@ -1083,8 +1129,8 @@ a {
 .tech-stack span {
     font-size: 0.75rem;
     padding: 4px 10px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--icon-box-bg);
+    border: 1px solid var(--glass-border);
     border-radius: 15px;
     color: var(--secondary);
 }
@@ -1218,10 +1264,13 @@ a {
 
 /* Contact Section */
 .contact-wrapper {
-    max-width: 1000px;
+    max-width: 1050px;
     margin: 0 auto;
-    padding: 30px 40px;
+    padding: 40px 50px;
     overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(145deg, var(--bg-card), transparent);
 }
 
 .contact-content {
@@ -1375,14 +1424,15 @@ a {
 .input-group input,
 .input-group textarea {
     width: 100%;
-    padding: 15px;
-    background: rgba(0, 0, 0, 0.2);
+    padding: 16px 20px;
+    background: var(--icon-box-bg);
     border: 1px solid var(--glass-border);
-    border-radius: 10px;
+    border-radius: 12px;
     color: var(--text-main);
     font-size: 0.95rem;
     outline: none;
     transition: var(--transition);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .input-group textarea {
@@ -1393,8 +1443,8 @@ a {
 
 .input-group label {
     position: absolute;
-    left: 15px;
-    top: 15px;
+    left: 20px;
+    top: 17px;
     color: var(--text-muted);
     pointer-events: none;
     transition: var(--transition);
@@ -1407,22 +1457,23 @@ a {
 .input-group textarea:focus,
 .input-group textarea:valid {
     border-color: var(--secondary);
-    background: rgba(0, 0, 0, 0.4);
-    box-shadow: 0 0 15px rgba(0, 219, 222, 0.1);
+    background: var(--hover-bg);
+    box-shadow: 0 0 20px rgba(0, 219, 222, 0.15);
 }
 
 .input-group input:focus~label,
 .input-group input:valid~label,
 .input-group textarea:focus~label,
 .input-group textarea:valid~label {
-    top: -12px;
-    left: 10px;
+    top: -10px;
+    left: 15px;
     font-size: 0.8rem;
     background: var(--bg-dark);
     /* Ensure label bg matches site bg to obscure border */
-    padding: 0 5px;
+    padding: 0 8px;
     color: var(--secondary);
     font-weight: 600;
+    border-radius: 4px;
 }
 
 .social-links {
@@ -1717,7 +1768,7 @@ footer {
         top: 60px;
         left: 0;
         width: 100%;
-        background: rgba(10, 10, 10, 0.95);
+        background: var(--glass-bg);
         flex-direction: column;
         padding: 30px;
         text-align: center;
