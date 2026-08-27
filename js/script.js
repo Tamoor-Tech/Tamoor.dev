@@ -114,7 +114,164 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Optional: Mouse movement effect for background blobs (Parallax)
+    // Active Navigation Link on Scroll
+    const sections = document.querySelectorAll('section');
+    const navItems = document.querySelectorAll('.nav-links li a.nav-item');
+
+    window.addEventListener('scroll', () => {
+        let currentSection = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= (sectionTop - 200)) {
+                currentSection = section.getAttribute('id');
+            }
+        });
+
+        navItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('href') === `#${currentSection}`) {
+                item.classList.add('active');
+            }
+        });
+    });
+
+    // Project Case Study Modal Functionality
+    const caseStudies = {
+        'college-system': {
+            title: "GCT Bhakkar Portal",
+            category: "Academic Hub & Responsive Platform",
+            problem: "The Government College of Technology, Bhakkar needed a centralized web presence to help students access notifications, download files, and explore departments. The existing layout was static and not optimized for mobile view grids.",
+            solution: "Designed and implemented a fluid grid structure using Bootstrap and semantic HTML5. Integrated filterable departments view, a real-time notice board carousel, and contact inquiry validations.",
+            role: "Frontend Developer (UI/UX Design, Bootstrap structures, Local state filters)",
+            tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "Git"]
+        },
+        'ai-portal': {
+            title: "AI Job & Hostel Portal",
+            category: "Full UI Prototypes & Mockups",
+            problem: "Job seekers and local students had to browse separate layouts to find jobs or local hostel details, resulting in poor user engagement and confusing user flows.",
+            solution: "Crafted a MERN-ready mockup portal presenting filter queries, dynamic job registration pages, responsive dashboard modules, and interactive listings cards using customized Glassmorphism patterns.",
+            role: "UX/UI Designer & Frontend Prototyper",
+            tech: ["HTML5", "CSS3", "JavaScript ES6", "Figma Design"]
+        },
+        'easypaisa': {
+            title: "EasyPaisa Console App",
+            category: "Banking Logic Simulator",
+            problem: "Simulating enterprise wallet transactions while ensuring correct variable flow, pin authorization, and local record preservation in low-level memory environments.",
+            solution: "Programmed a console database script utilizing Object-Oriented C++ principles, validating PIN access, handling dynamic float balances, and printing transactional ledger tables.",
+            role: "Core Developer (System Architecture, Memory State Logs)",
+            tech: ["C++", "OOP", "Data Structures", "Console I/O"]
+        },
+        'quiz-app': {
+            title: "Interactive Quiz App",
+            category: "Frontend Web Application",
+            problem: "Creating an engaging quiz experience with multiple categories, high performance, local storage score memory, and responsive layout constraints.",
+            solution: "Built a vanilla JS application utilizing interval timers, dynamic DOM node updates, SVG scoring progress boards, and session history preservation.",
+            role: "Solo Developer",
+            tech: ["HTML5", "CSS3", "JavaScript ES6", "SVG Rendering"]
+        }
+    };
+
+    const modalOverlay = document.getElementById('project-modal');
+    const modalClose = document.getElementById('modal-close');
+    const modalBody = document.getElementById('modal-body-content');
+
+    const openModal = (projectKey) => {
+        const data = caseStudies[projectKey];
+        if (!data) return;
+
+        let techBadges = data.tech.map(t => `<span class="skill-badge">${t}</span>`).join('');
+
+        modalBody.innerHTML = `
+            <h2>${data.title} <span>Case Study</span></h2>
+            <p style="font-weight: 600; color: var(--secondary); margin-bottom: 20px;">${data.category}</p>
+            <div class="modal-grid-content">
+                <div>
+                    <h4 class="modal-section-title"><i class="fas fa-exclamation-circle"></i> The Challenge</h4>
+                    <p>${data.problem}</p>
+                    <h4 class="modal-section-title"><i class="fas fa-check-circle"></i> The Solution</h4>
+                    <p>${data.solution}</p>
+                </div>
+                <div>
+                    <h4 class="modal-section-title"><i class="fas fa-user-tag"></i> My Role</h4>
+                    <p>${data.role}</p>
+                    <h4 class="modal-section-title"><i class="fas fa-laptop-code"></i> Technologies Used</h4>
+                    <div class="modal-tech-list">${techBadges}</div>
+                </div>
+            </div>
+        `;
+
+        modalOverlay.classList.add('open');
+        document.body.style.overflow = 'hidden'; // Save body state and scroll
+    };
+
+    const closeModal = () => {
+        modalOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+    };
+
+    // Bind Detail Buttons
+    document.querySelectorAll('.btn-case-study').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const projectKey = e.currentTarget.getAttribute('data-project');
+            openModal(projectKey);
+        });
+    });
+
+    if (modalClose) {
+        modalClose.addEventListener('click', closeModal);
+    }
+
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) closeModal();
+        });
+    }
+
+    // Contact Form Valiadation / Simulated Submission
+    const contactForm = document.getElementById('contact-form');
+    const contactStatus = document.getElementById('contact-status');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('contact-name').value.trim();
+            const email = document.getElementById('contact-email').value.trim();
+            const subject = document.getElementById('contact-subject').value.trim();
+            const message = document.getElementById('contact-message').value.trim();
+
+            if (!name || !email || !subject || !message) {
+                showMessage("Please fill in all layout field values.", "error");
+                return;
+            }
+
+            // Optional regex match
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showMessage("Please enter a valid email address.", "error");
+                return;
+            }
+
+            // Simulate sending feedback
+            showMessage("Sending message...", "success");
+            
+            setTimeout(() => {
+                showMessage("Thanks, Tamoor has received your message and will respond within 24 hours!", "success");
+                contactForm.reset();
+            }, 1500);
+        });
+    }
+
+    function showMessage(text, type) {
+        contactStatus.textContent = text;
+        contactStatus.className = 'contact-status-msg ' + type;
+        if (type === 'error') {
+            contactStatus.style.display = 'block';
+        }
+    }
+
+    // Optional Mouse Blob Parallax
     document.addEventListener('mousemove', (e) => {
         const blobs = document.querySelectorAll('.blob');
         if (blobs.length > 0) {
@@ -126,7 +283,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 const xOffset = (window.innerWidth / 2 - e.clientX) / speed;
                 const yOffset = (window.innerHeight / 2 - e.clientY) / speed;
 
-                // Subtle movement opposite to mouse
                 blob.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
             });
         }

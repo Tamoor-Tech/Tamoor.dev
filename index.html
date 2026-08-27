@@ -4,11 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tamoor's Portfolio</title>
+    <title>Tamoor Shahzad | Premium MERN Stack Developer Portfolio</title>
+    <meta name="description" content="Premium professional portfolio of Tamoor Shahzad, a MERN Stack Developer building modern, responsive, and database-driven web applications.">
+    <meta name="keywords" content="MERN Stack Developer, Full Stack Developer, React Developer, Node.js Developer, Web Developer, Web Development, Pakistan, Tamoor Shahzad, Bhakkar">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tamoor Shahzad | Premium MERN Stack Developer Portfolio">
+    <meta property="og:description" content="I build responsive, user-focused web applications using modern frontend and backend technologies.">
+    <meta property="og:image" content="portfolio_image.jpeg">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Font Awesome for Icons -->
@@ -39,10 +46,13 @@
         <ul class="nav-links">
             <li><a href="#home" class="nav-item"><i class="fas fa-home"></i> <span class="nav-text">Home</span></a></li>
             <li><a href="#about" class="nav-item"><i class="fas fa-user"></i> <span class="nav-text">About</span></a></li>
+            <li><a href="#services" class="nav-item"><i class="fas fa-cubes"></i> <span class="nav-text">Services</span></a></li>
             <li><a href="#skills" class="nav-item"><i class="fas fa-laptop-code"></i> <span class="nav-text">Skills</span></a></li>
             <li><a href="#projects" class="nav-item"><i class="fas fa-briefcase"></i> <span class="nav-text">Projects</span></a></li>
+            <li><a href="#process" class="nav-item"><i class="fas fa-network-wired"></i> <span class="nav-text">Process</span></a></li>
             <li><a href="#faq" class="nav-item"><i class="fas fa-question-circle"></i> <span class="nav-text">FAQs</span></a></li>
             <li><a href="#contact" class="nav-item"><i class="fas fa-envelope"></i> <span class="nav-text">Contact</span></a></li>
+            <li><a href="#contact" class="nav-item btn-nav"><i class="fas fa-paper-plane"></i> <span class="nav-text">Hire Me</span></a></li>
         </ul>
         <div class="theme-toggle">
             <i class="fas fa-moon" id="theme-icon"></i>
@@ -59,22 +69,21 @@
                 <div class="hero-text-col">
                     <span class="greeting">Hello, I'm</span>
                     <h1 class="glitch" data-text="Tamoor Shahzad">Tamoor Shahzad</h1>
-                    <h2 class="subtitle"><span class="gradient-text">MERN-Stack Developer | Crafting Modern & Responsive
-                            Web Experience</span></h2>
-                    <p class="hero-text">I'm learning and building modern, responsive websites using HTML, CSS, and
-                        JavaScript, with a strong focus on clean UI and user experience.</p>
+                    <h2 class="subtitle"><span class="gradient-text">MERN Stack Developer Building Modern Web Applications</span></h2>
+                    <p class="hero-text">I build responsive, user-focused web applications and digital experiences using modern frontend and backend technologies.</p>
                     <div class="cta-group">
-                        <a href="#projects" class="btn btn-primary">View Work</a>
-                        <a href="resume.html" target="_blank" class="btn btn-outline">My Resume</a>
+                        <a href="#projects" class="btn btn-primary">View My Projects</a>
+                        <a href="#contact" class="btn btn-outline">Hire Me</a>
+                        <a href="resume.html" target="_blank" class="btn btn-outline"><i class="fas fa-download"></i> Resume</a>
                     </div>
                 </div>
                 <div class="hero-image-col">
                     <div class="hero-img-wrapper">
                         <div class="glow-ring ring-1"></div>
                         <div class="glow-ring ring-2"></div>
-                        <div class="floating-icon icon-1"><i class="fab fa-html5"></i></div>
-                        <div class="floating-icon icon-2"><i class="fab fa-css3-alt"></i></div>
-                        <div class="floating-icon icon-3"><i class="fab fa-js"></i></div>
+                        <div class="floating-icon icon-1"><i class="fab fa-react" style="color: #61DAFB;"></i></div>
+                        <div class="floating-icon icon-2"><i class="fab fa-node-js" style="color: #339933;"></i></div>
+                        <div class="floating-icon icon-3"><i class="fas fa-leaf" style="color: #47A248;"></i></div>
                         <img src="portfolio_image.jpeg" alt="Hero Image" class="hero-img glass-card">
                     </div>
                 </div>
@@ -82,37 +91,106 @@
         </div>
     </section>
 
+    <!-- Trust/Technology Strip -->
+    <div class="trust-strip glass">
+        <div class="container strip-wrapper">
+            <span class="strip-title">Core Stack:</span>
+            <div class="strip-items">
+                <span class="strip-item"><i class="fab fa-react" style="color: #61DAFB;"></i> React</span>
+                <span class="strip-item"><i class="fab fa-node-js" style="color: #339933;"></i> Node.js</span>
+                <span class="strip-item"><i class="fas fa-leaf" style="color: #47A248;"></i> MongoDB</span>
+                <span class="strip-item"><i class="fab fa-js" style="color: #F7DF1E;"></i> JavaScript</span>
+                <span class="strip-item"><i class="fab fa-bootstrap" style="color: #7952B3;"></i> Bootstrap</span>
+                <span class="strip-item"><i class="fab fa-git-alt" style="color: #F05032;"></i> Git</span>
+            </div>
+        </div>
+    </div>
+
     <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
             <h2 class="section-title">About <span>Me</span></h2>
-            <p class="section-subtitle">Get to know the person behind the code.</p>
+            <p class="section-subtitle">Get to know the developer behind the code.</p>
             <div class="about-content glass-card reveal">
                 <div class="about-image">
                     <img src="about_image.jpeg" alt="Tamoor Profile"
                         style="border-radius: 50%; width: 250px; height: 250px; object-fit: cover; border: 3px solid rgba(255,255,255,0.1); box-shadow: 0 0 30px rgba(187, 0, 255, 0.4);">
                 </div>
                 <div class="about-text">
-                    <p>I am a <strong>Frontend Developer</strong> learner with a strong passion for building clean,
-                        responsive and visually appealing web interfaces.I enjoy turning simple ideas into interactive
-                        designs using modern web technologies.</p>
-                    <p>Currently, I am improving my skills by working on real projects and continuously learning HTML,
-                        CSS, Bootstrap and JavaScript.I focus on writing clean code, improving user experience, and
-                        growing step by step as a professional frontend developer.</p>
+                    <p>I’m a MERN Stack Developer focused on building responsive, functional and user-friendly web applications. I enjoy turning ideas into practical digital products through clean interfaces, structured code, and modern web technologies.</p>
+                    <p>I have built multiple responsive client websites and database-integrated projects to consolidate my skills in HTML, CSS, JavaScript, React, Node.js, Express, and MongoDB. I focus on writing maintainable, clean code, optimizing web application speed, and expanding my expertise with robust full-stack solutions.</p>
                 </div>
                 <div class="about-stats">
                     <div class="stat-item">
-                        <h3>6+</h3>
-                        <p>Months Experience</p>
+                        <h3>8+</h3>
+                        <p>Core Stack Tech</p>
                     </div>
                     <div class="stat-item">
-                        <h3>3+</h3>
-                        <p>Projects Completed</p>
+                        <h3>6+</h3>
+                        <p>Projects Built</p>
                     </div>
                     <div class="stat-item">
                         <h3>100%</h3>
-                        <p>Satisfaction</p>
+                        <p>Dedication</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">What I <span>Can Build</span></h2>
+            <p class="section-subtitle">Delivering high-quality, responsive dev services for businesses and teams.</p>
+            <div class="services-grid">
+                <!-- Card 1 -->
+                <div class="service-card glass-card reveal">
+                    <div class="service-icon"><i class="fas fa-desktop"></i></div>
+                    <h3>Business Websites</h3>
+                    <p>Modern, responsive marketing and landing pages that promote your brand, load fast, and convert visitors.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="service-card glass-card reveal">
+                    <div class="service-icon"><i class="fas fa-cubes"></i></div>
+                    <h3>Full-Stack Web Applications</h3>
+                    <p>Clean full-cycle web applications built using React, Node.js, Express, and MongoDB for dynamic features.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="service-card glass-card reveal">
+                    <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
+                    <h3>E-commerce Storefronts</h3>
+                    <p>Custom online storefronts featuring interactive catalogs, cart management, and fluid customer checkouts.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="service-card glass-card reveal">
+                    <div class="service-icon"><i class="fas fa-chart-pie"></i></div>
+                    <h3>Admin Dashboards</h3>
+                    <p>Secure custom backend analytical panels to manage database entries, system states, and business analytics.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="service-card glass-card reveal">
+                    <div class="service-icon"><i class="fas fa-link"></i></div>
+                    <h3>REST API Integration</h3>
+                    <p>Connecting frontend components with third-party web services or proprietary APIs smoothly and securely.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="service-card glass-card reveal">
+                    <div class="service-icon"><i class="fas fa-database"></i></div>
+                    <h3>Database-Driven Applications</h3>
+                    <p>Connecting web views to MongoDB or SQL databases to handle user authentication and persistent user logs.</p>
+                </div>
+                <!-- Card 7 -->
+                <div class="service-card glass-card reveal">
+                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>Responsive Web Development</h3>
+                    <p>Refactoring desktop interfaces to fit perfectly across all smartphones, tablets, and large displays.</p>
+                </div>
+                <!-- Card 8 -->
+                <div class="service-card glass-card reveal">
+                    <div class="service-icon"><i class="fas fa-tools"></i></div>
+                    <h3>Improvements & Maintenance</h3>
+                    <p>Auditing and refactoring legacy CSS/JavaScript layouts for improved loading speeds and clean structures.</p>
                 </div>
             </div>
         </div>
@@ -121,326 +199,323 @@
     <!-- Skills Section -->
     <section id="skills" class="section">
         <div class="container">
-            <h2 class="section-title">My <span>Skills</span></h2>
-            <p class="section-subtitle">The skills I'm learning and improving every day</p>
-            <div class="skills-grid">
-                <!-- HTML 92% -->
-                <div class="skill-card glass-card reveal">
-                    <i class="fab fa-html5" style="color: #E34F26;"></i>
-                    <div class="skill-info">
-                        <div class="skill-header">
-                            <h3>HTML</h3>
-                            <span>92%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 92%;"></div>
-                        </div>
+            <h2 class="section-title">Technical <span>Stack</span></h2>
+            <p class="section-subtitle">Verified software expertise and development competencies</p>
+            <div class="skills-categories-grid">
+                <!-- Frontend -->
+                <div class="skills-category-card glass-card reveal">
+                    <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+                    <div class="skills-list">
+                        <span class="skill-badge"><i class="fab fa-html5" style="color: #E34F26;"></i> HTML5</span>
+                        <span class="skill-badge"><i class="fab fa-css3-alt" style="color: #1572B6;"></i> CSS3</span>
+                        <span class="skill-badge"><i class="fab fa-js" style="color: #F7DF1E;"></i> JavaScript ES6+</span>
+                        <span class="skill-badge"><i class="fab fa-bootstrap" style="color: #7952B3;"></i> Bootstrap</span>
+                        <span class="skill-badge"><i class="fab fa-react" style="color: #61DAFB;"></i> React</span>
                     </div>
                 </div>
-                <!-- CSS 90% -->
-                <div class="skill-card glass-card reveal">
-                    <i class="fab fa-css3-alt" style="color: #1572B6;"></i>
-                    <div class="skill-info">
-                        <div class="skill-header">
-                            <h3>CSS</h3>
-                            <span>90%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 90%;"></div>
-                        </div>
+                <!-- Backend -->
+                <div class="skills-category-card glass-card reveal">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <div class="skills-list">
+                        <span class="skill-badge"><i class="fab fa-node-js" style="color: #339933;"></i> Node.js</span>
+                        <span class="skill-badge"><i class="fas fa-server" style="color: #a0a0a0;"></i> Express.js</span>
+                        <span class="skill-badge"><i class="fas fa-project-diagram" style="color: #61DAFB;"></i> REST APIs</span>
                     </div>
                 </div>
-                <!-- Bootstrap 93% -->
-                <div class="skill-card glass-card reveal">
-                    <i class="fab fa-bootstrap" style="color: #7952B3;"></i>
-                    <div class="skill-info">
-                        <div class="skill-header">
-                            <h3>Bootstrap</h3>
-                            <span>93%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 93%;"></div>
-                        </div>
+                <!-- Database -->
+                <div class="skills-category-card glass-card reveal">
+                    <h3><i class="fas fa-database"></i> Database</h3>
+                    <div class="skills-list">
+                        <span class="skill-badge"><i class="fas fa-leaf" style="color: #47A248;"></i> MongoDB</span>
+                        <span class="skill-badge"><i class="fas fa-database" style="color: #4479A1;"></i> MySQL</span>
                     </div>
                 </div>
-                <!-- C++ 85% -->
-                <div class="skill-card glass-card reveal">
-                    <i class="fas fa-code" style="color: #00599C;"></i> <!-- Using Generic Code Icon for C++ -->
-                    <div class="skill-info">
-                        <div class="skill-header">
-                            <h3>C++</h3>
-                            <span>85%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 85%;"></div>
-                        </div>
+                <!-- Tools -->
+                <div class="skills-category-card glass-card reveal">
+                    <h3><i class="fas fa-tools"></i> Tools</h3>
+                    <div class="skills-list">
+                        <span class="skill-badge"><i class="fab fa-git-alt" style="color: #F05032;"></i> Git</span>
+                        <span class="skill-badge"><i class="fab fa-github" style="color: #ffffff;"></i> GitHub</span>
+                        <span class="skill-badge"><i class="fas fa-file-code" style="color: #007ACC;"></i> VS Code</span>
+                        <span class="skill-badge"><i class="fab fa-figma" style="color: #F24E1E;"></i> Figma</span>
+                        <span class="skill-badge"><i class="fas fa-paint-brush" style="color: #00C4CC;"></i> Canva</span>
                     </div>
                 </div>
-                <!-- JS 80% -->
-                <div class="skill-card glass-card reveal">
-                    <i class="fab fa-js" style="color: #F7DF1E;"></i>
-                    <div class="skill-info">
-                        <div class="skill-header">
-                            <h3>JavaScript</h3>
-                            <span>80%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 80%;"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- MySQL 70% -->
-                <div class="skill-card glass-card reveal">
-                    <i class="fas fa-database" style="color: #4479A1;"></i>
-                    <div class="skill-info">
-                        <div class="skill-header">
-                            <h3>MySQL</h3>
-                            <span>70%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 70%;"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- GitHub -->
-                <div class="skill-card glass-card reveal">
-                    <i class="fab fa-github" style="color: #ffffff;"></i>
-                    <div class="skill-info">
-                        <div class="skill-header">
-                            <h3>GitHub</h3>
-                            <span>80%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 80%;"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- React -->
-                <div class="skill-card glass-card reveal">
-                    <i class="fab fa-react" style="color: #61DAFB;"></i>
-                    <div class="skill-info">
-                        <div class="skill-header">
-                            <h3>React</h3>
-                            <span>60%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 60%;"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Angular -->
-                <div class="skill-card glass-card reveal">
-                    <i class="fab fa-angular" style="color: #DD0031;"></i>
-                    <div class="skill-info">
-                        <div class="skill-header">
-                            <h3>Angular</h3>
-                            <span>40%</span>
-                        </div>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 40%;"></div>
-                        </div>
+                <!-- Development Core -->
+                <div class="skills-category-card glass-card reveal">
+                    <h3><i class="fas fa-brain"></i> Core Dev</h3>
+                    <div class="skills-list">
+                        <span class="skill-badge"><i class="fas fa-mobile-alt"></i> Responsive Design</span>
+                        <span class="skill-badge"><i class="fas fa-exchange-alt"></i> API Integration</span>
+                        <span class="skill-badge"><i class="fas fa-plus-minus"></i> CRUD Operations</span>
+                        <span class="skill-badge"><i class="fas fa-user-shield"></i> Authentication</span>
+                        <span class="skill-badge"><i class="fas fa-database"></i> Database Integration</span>
+                        <span class="skill-badge"><i class="fas fa-cloud-upload-alt"></i> Deployment</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Me Section -->
+    <!-- Why Work With Me Section -->
     <section id="why-choose-me" class="section">
         <div class="container">
-            <h2 class="section-title">Why <span>Choose Me</span></h2>
-            <p class="section-subtitle">What make me a reliavle frontend developer in progress.</p>
+            <h2 class="section-title">Why Work <span>With Me</span></h2>
+            <p class="section-subtitle">Bringing structured engineering solutions and customer care to every project</p>
             <div class="features-grid">
                 <!-- Card 1 -->
                 <div class="feature-card reveal">
                     <div class="icon-box">
-                        <i class="fas fa-code"></i>
+                        <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <h3>Clean Code</h3>
-                    <p>Write well-structured, readable, and maintainable HTML, CSS, and JavaScript.</p>
+                    <h3>Responsive Development</h3>
+                    <p>Every website functions seamlessly on all devices from mobile to premium large desktop resolutions.</p>
                 </div>
                 <!-- Card 2 -->
                 <div class="feature-card reveal">
                     <div class="icon-box">
-                        <i class="fas fa-mobile-alt"></i>
+                        <i class="fas fa-code"></i>
                     </div>
-                    <h3>Responsive Design</h3>
-                    <p>Create fully responsive websites that work perfectly on all screen sizes.</p>
+                    <h3>Clean Code Standards</h3>
+                    <p>Readable, standardized, and semantic markup to facilitate effortless maintenance and updates.</p>
                 </div>
                 <!-- Card 3 -->
                 <div class="feature-card reveal">
                     <div class="icon-box">
-                        <i class="fas fa-bug"></i>
+                        <i class="fas fa-database"></i>
                     </div>
-                    <h3>Problem Solving</h3>
-                    <p>I enjoy solving frontend challenges and finding effective solutions through practice.</p>
+                    <h3>MERN Integration</h3>
+                    <p>Robust database schemas and secure REST API interfaces connecting to your backend server layers.</p>
                 </div>
                 <!-- Card 4 -->
                 <div class="feature-card reveal">
                     <div class="icon-box">
-                        <i class="fas fa-layer-group"></i>
+                        <i class="fas fa-comments"></i>
                     </div>
-                    <h3>Continuous Learning</h3>
-                    <p>Constantly learning new tools, techniques, and best practices in web development.</p>
+                    <h3>Clear Communication</h3>
+                    <p>Active project scoping, regular feedback cycles, and highly honest project status reports.</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Work Process Section -->
+    <section id="process" class="section">
+        <div class="container">
+            <h2 class="section-title">How I <span>Work</span></h2>
+            <p class="section-subtitle">A transparent, step-by-step approach to turning your ideas into deployed products</p>
+            <div class="process-timeline">
+                <!-- Step 1 -->
+                <div class="process-item reveal">
+                    <div class="process-number">01</div>
+                    <div class="process-content glass-card">
+                        <h3>Discover</h3>
+                        <p>We discuss the goals, scope, domain logic, target users, and gather all the necessary project requirements.</p>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="process-item reveal">
+                    <div class="process-number">02</div>
+                    <div class="process-content glass-card">
+                        <h3>Plan</h3>
+                        <p>We map out the application page patterns, user database schemas, third-party APIs, and initial design structure.</p>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="process-item reveal">
+                    <div class="process-number">03</div>
+                    <div class="process-content glass-card">
+                        <h3>Design</h3>
+                        <p>Drafting clean, modern user interfaces focusing on user experience, responsive grids, and professional look.</p>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                <div class="process-item reveal">
+                    <div class="process-number">04</div>
+                    <div class="process-content glass-card">
+                        <h3>Develop</h3>
+                        <p>Writing responsive frontend structures, backend controllers/routes, and setting up persistent MongoDB operations.</p>
+                    </div>
+                </div>
+                <!-- Step 5 -->
+                <div class="process-item reveal">
+                    <div class="process-number">05</div>
+                    <div class="process-content glass-card">
+                        <h3>Test</h3>
+                        <p>Rigorous verification of API requests, form validations, page load speeds, and multi-device styling compatibility.</p>
+                    </div>
+                </div>
+                <!-- Step 6 -->
+                <div class="process-item reveal">
+                    <div class="process-number">06</div>
+                    <div class="process-content glass-card">
+                        <h3>Deploy</h3>
+                        <p>Configuring staging, pushing database models, linking secure environment variables, and delivering project live files.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Projects Section -->
     <section id="projects" class="section">
         <div class="container">
             <h2 class="section-title">My <span>Projects</span></h2>
-            <p class="section-subtitle">Building real projects while learning frontend development</p>
-            <div class="projects-grid">
+            <p class="section-subtitle">Building real projects while learning frontend development</p>            <div class="projects-grid">
 
+                <!-- Project 1: College System -->
                 <div class="project-card glass-card reveal">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                             alt="College Website" class="project-img">
+                        <span class="project-tag">Frontend & Portal</span>
                     </div>
                     <div class="project-info">
-                        <h3>College Management System Website</h3>
-                        <p>Built a responsive website for GCT Bhakkar to showcase college information, courses,
-                            departments and events. Focused on clean and modern UI, easy navigation and user-friendly
-                            desing. Implemented sections like About, Departments, Faculty, Gallery, and Contact while
-                            practicing HTML, CSS, JavaScript.</p>
+                        <h3>GCT Bhakkar Portal</h3>
+                        <p>A responsive academic platform built to display college departments, dynamic notice boards, and student admissions criteria.</p>
                         <div class="tech-stack">
-                            <span>HTML</span><span>CSS</span><span>JS</span>
+                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://tamoor-tech.github.io/gctbhakkar-frontend/" class="btn-project btn-demo"><i
-                                    class="fas fa-eye"></i> View Demo</a>
-                            <a href="https://github.com/Tamoor-Tech/gctbhakkar-frontend.git"
-                                class="btn-project btn-code"><i class="fab fa-github"></i> Repository</a>
+                            <a href="https://tamoor-tech.github.io/gctbhakkar-frontend/" class="btn-project btn-demo" target="_blank"><i class="fas fa-eye"></i> Demo</a>
+                            <a href="https://github.com/Tamoor-Tech/gctbhakkar-frontend.git" class="btn-project btn-code" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <button class="btn-project btn-case-study" data-project="college-system"><i class="fas fa-file-alt"></i> Details</button>
                         </div>
                     </div>
                 </div>
 
+                <!-- Project 2: AI Portal -->
                 <div class="project-card glass-card reveal">
                     <div class="project-image">
                         <img src="ai_portal.png" alt="AI-Powered Job & Hostel portal interface." class="project-img">
+                        <span class="project-tag">Frontend / UX Demo</span>
                     </div>
                     <div class="project-info">
-                        <h3>AI Powered Job & Hostel Portal (Frontend only)</h3>
-                        <p>Built the front-end of an AI-powered job and hostel portal, focusing on responsive layouts,
-                            interactive forms, and intuitive navigation. Designed key features such as registration,
-                            login, search filters, and user dashboards to simulates real-world portal functionality.
-                            Practiced HTML, CSS, and JavaScript while ensuring a clean and modern user interface.</p>
+                        <h3>AI Job & Hostel Portal</h3>
+                        <p>Frontend interface of a smart job placement and hostel booking portal showing responsive dashboards and registration states.</p>
                         <div class="tech-stack">
-                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>UX Design</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://worknstay.netlify.app/" class="btn-project btn-demo"><i
-                                    class="fas fa-eye"></i> View Demo</a>
-                            <a href="https://github.com/Tamoor-Tech/workNstay_AI.git" class="btn-project btn-code"><i
-                                    class="fab fa-github"></i> Repository</a>
+                            <a href="https://worknstay.netlify.app/" class="btn-project btn-demo" target="_blank"><i class="fas fa-eye"></i> Demo</a>
+                            <a href="https://github.com/Tamoor-Tech/workNstay_AI.git" class="btn-project btn-code" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <button class="btn-project btn-case-study" data-project="ai-portal"><i class="fas fa-file-alt"></i> Details</button>
                         </div>
                     </div>
                 </div>
 
+                <!-- Project 3: EasyPaisa Console APP -->
                 <div class="project-card glass-card reveal">
                     <div class="project-image">
-                        <img src="easypaisa_app.png" alt="EasyPaisa console application interface illustration"
-                            class="project-img">
+                        <img src="easypaisa_app.png" alt="EasyPaisa console application interface illustration" class="project-img">
+                        <span class="project-tag">System Logic</span>
                     </div>
                     <div class="project-info">
-                        <h3>EasyPaisa Console Application (C++)</h3>
-                        <p>Built a console-based EasyPaisa application using C++ to practice programming logic,
-                            object-oriented concepts, and problem-solving skills. Implemented features like balance
-                            management, sending/receiving money, and transaction history.</p>
+                        <h3>EasyPaisa Console App</h3>
+                        <p>A console bank transaction simulator written in C++ demonstrating structured logic, class patterns, and authentication checks.</p>
                         <div class="tech-stack">
-                            <span>C++</span>
+                            <span>C++</span><span>OOP</span><span>Data Management</span>
                         </div>
                         <div class="project-links">
-                            <!-- <a href="#" class="btn-project btn-demo"><i class="fas fa-eye"></i> View Demo</a> -->
-                            <a href="https://github.com/Tamoor-Tech/EasyPaisa-Application.git"
-                                class="btn-project btn-code"><i class="fab fa-github"></i> Repository</a>
+                            <a href="https://github.com/Tamoor-Tech/EasyPaisa-Application.git" class="btn-project btn-code" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <button class="btn-project btn-case-study" data-project="easypaisa"><i class="fas fa-file-alt"></i> Details</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card glass-card reveal">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=600&q=80" alt="Seat Booking Application" class="project-img">
-                    </div>
-                    <div class="project-info">
-                        <h3>Seat Booking Application</h3>
-                        <p>Developed a seat booking application where users can select and reserve their preferred seats for events or movies. Features interactive UI and real-time seat availability updates.</p>
-                        <div class="tech-stack">
-                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn-project btn-demo"><i class="fas fa-eye"></i> View Demo</a>
-                            <a href="#" class="btn-project btn-code"><i class="fab fa-github"></i> Repository</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card glass-card reveal">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80" alt="SVG to MP4 Tool" class="project-img">
-                    </div>
-                    <div class="project-info">
-                        <h3>SVG to MP4 Tool</h3>
-                        <p>Created a utility tool to convert SVG animations into high-quality MP4 video formats. Built with web technologies to process and render graphics efficiently.</p>
-                        <div class="tech-stack">
-                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn-project btn-demo"><i class="fas fa-eye"></i> View Demo</a>
-                            <a href="#" class="btn-project btn-code"><i class="fab fa-github"></i> Repository</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card glass-card reveal">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&q=80" alt="Students Management System" class="project-img">
-                    </div>
-                    <div class="project-info">
-                        <h3>Students Management System</h3>
-                        <p>Built a comprehensive management system to handle student records, attendance, and grades, making administrative tasks simpler and more organized.</p>
-                        <div class="tech-stack">
-                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn-project btn-demo"><i class="fas fa-eye"></i> View Demo</a>
-                            <a href="#" class="btn-project btn-code"><i class="fab fa-github"></i> Repository</a>
-                        </div>
-                    </div>
-                </div>
-
+                <!-- Project 4: Quiz App -->
                 <div class="project-card glass-card reveal">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?w=600&q=80" alt="Quiz Application" class="project-img">
+                        <span class="project-tag">JavaScript Web App</span>
                     </div>
                     <div class="project-info">
-                        <h3>Quiz Application</h3>
-                        <p>An interactive quiz application with various categories and difficulty levels. Features a scoring system, timer, and detailed feedback at the end of the quiz.</p>
+                        <h3>Interactive Quiz App</h3>
+                        <p>Fully client-side quiz application displaying user timers, categorization schemas, and interactive performance charts.</p>
                         <div class="tech-stack">
-                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                            <span>HTML5</span><span>CSS3</span><span>JavaScript ES6</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="btn-project btn-demo"><i class="fas fa-eye"></i> View Demo</a>
-                            <a href="#" class="btn-project btn-code"><i class="fab fa-github"></i> Repository</a>
+                            <a href="#" class="btn-project btn-demo"><i class="fas fa-eye"></i> Demo</a>
+                            <a href="#" class="btn-project btn-code"><i class="fab fa-github"></i> Code</a>
+                            <button class="btn-project btn-case-study" data-project="quiz-app"><i class="fas fa-file-alt"></i> Details</button>
                         </div>
                     </div>
                 </div>
 
+                <!-- Project 5: Seat Booking -->
+                <div class="project-card glass-card reveal">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=600&q=80" alt="Seat Booking Application" class="project-img">
+                        <span class="project-tag">Interactive UI</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Dynamic Seat Booking Link</h3>
+                        <p>Interactive coordinate reservation dashboard showing live seat status changes, cart counting, and booking state maps.</p>
+                        <div class="tech-stack">
+                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-project btn-demo"><i class="fas fa-eye"></i> Demo</a>
+                            <a href="#" class="btn-project btn-code"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: SVG to MP4 Converter -->
+                <div class="project-card glass-card reveal">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80" alt="SVG to MP4 Tool" class="project-img">
+                        <span class="project-tag">Dev Tool</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>SVG to MP4 Graphics Engine</h3>
+                        <p>Canvas layout recorder leveraging CSS keyframe rendering pipelines to translate SVG vector nodes into static media stream bundles.</p>
+                        <div class="tech-stack">
+                            <span>HTML5</span><span>Canvas API</span><span>JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-project btn-demo"><i class="fas fa-eye"></i> Demo</a>
+                            <a href="#" class="btn-project btn-code"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7: Students Management System -->
+                <div class="project-card glass-card reveal">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&q=80" alt="Students Management System" class="project-img">
+                        <span class="project-tag">Data Management</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>Students Records Catalog</h3>
+                        <p>Data ledger interface for teachers to process student grade reports, daily registration, and administrative records.</p>
+                        <div class="tech-stack">
+                            <span>HTML5</span><span>CSS3</span><span>JavaScript ES6</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-project btn-demo"><i class="fas fa-eye"></i> Demo</a>
+                            <a href="#" class="btn-project btn-code"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8: Profile Card React -->
                 <div class="project-card glass-card reveal">
                     <div class="project-image">
                         <img src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?w=600&q=80" alt="React Profile Card" class="project-img">
+                        <span class="project-tag">Component Dev</span>
                     </div>
                     <div class="project-info">
-                        <h3>Profile Card with React</h3>
-                        <p>A beautifully designed, interactive user profile card component built using React. Implements modern UI principles with state management and dynamic rendering.</p>
+                        <h3>React Interactive Profile Card</h3>
+                        <p>Responsive social layout badge component showing dynamic React states, context toggles, and animated transitions.</p>
                         <div class="tech-stack">
-                            <span>React</span><span>Angular</span><span>JavaScript</span>
+                            <span>React</span><span>CSS Modules</span><span>JavaScript</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="btn-project btn-demo"><i class="fas fa-eye"></i> View Demo</a>
-                            <a href="#" class="btn-project btn-code"><i class="fab fa-github"></i> Repository</a>
+                            <a href="#" class="btn-project btn-demo"><i class="fas fa-eye"></i> Demo</a>
+                            <a href="#" class="btn-project btn-code"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
                 </div>
@@ -448,62 +523,60 @@
             </div>
         </div>
     </section>
-
     <!-- FAQ Section -->
     <section id="faq" class="section">
         <div class="container">
             <h2 class="section-title">Common <span>Questions</span></h2>
-            <p class="section-subtitle">Answers to the most common questions about me and my wokr</p>
+            <p class="section-subtitle">Answers to the most common questions about my services and development workflow</p>
             <div class="faq-wrapper glass-card reveal">
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>Are you available for internship?</h3>
+                        <h3>What technologies do you specialize in?</h3>
                         <i class="fas fa-plus"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Yes! I'm currently looking for internship opportunities to apply and grow my front-end
-                            skills.</p>
+                        <p>I specialize in the MERN Stack. This includes database layout design using MongoDB, REST API development with Node.js and Express.js, and client interface designs with React, HTML5, CSS3, JavaScript (ES6+), and Bootstrap grids.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>What technologies are you familiar wiht?</h3>
+                        <h3>Are you open to full-time remote roles or contract work?</h3>
                         <i class="fas fa-plus"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>HTML, CSS, Bootstrap, JavaScript, and building responsive, user-friendly websites.</p>
+                        <p>Absolutely. I am seeking both freelance web projects and long-term full-time web development opportunities where I can align my skills with an engineering team's milestones.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>Have you worked on real-world projects?</h3>
+                        <h3>Can you design the UI or work from pre-existing Figma designs?</h3>
                         <i class="fas fa-plus"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Yes, I've built projects like GCT Bhakkar website, AI Job & Hostel Portal (front-end) and
-                            EasyPaisa console application.</p>
+                        <p>Yes. I frequently build clean interfaces directly from Figma or Canva wireframes. I translate modern page visuals into pixel-perfect, responsive frontend components.</p>
                     </div>
                 </div>
+
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>Can you work on a team project?</h3>
+                        <h3>How do you verify the responsiveness and quality of websites?</h3>
                         <i class="fas fa-plus"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Absolutely, I enjoy collaborating with others and learning from team experience.</p>
+                        <p>Every layout goes through responsive breakpoint verification from 320px up to 1920px screen resolutions. I write clean, structured code and inspect styling compliance on Chrome, Safari, and Firefox systems before project delivery.</p>
                     </div>
                 </div>
+
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3>How do you approach learning new technologies?</h3>
+                        <h3>How fast do you respond to communications and quotes?</h3>
                         <i class="fas fa-plus"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>I practice by building small projects, reading documentation, and expermenting to understand
-                            how things work.</p>
+                        <p>I review my inbox daily. I respond to all client queries, recruitment invitations, and technical project consultation requests within 12–24 business hours.</p>
                     </div>
                 </div>
 
@@ -515,16 +588,14 @@
     <section id="contact" class="section">
         <div class="container">
             <h2 class="section-title">Get In <span>Touch</span></h2>
-            <p class="section-subtitle">I'm open to internships, collaborations and learning opportunities</p>
+            <p class="section-subtitle">Let's discuss your next project, integration requirements, or job opportunities</p>
             <div class="contact-wrapper glass-card reveal">
                 <div class="contact-content">
 
                     <!-- Contact Info Column -->
                     <div class="contact-info-col">
                         <h3>Let's Chat</h3>
-                        <p class="contact-desc ">I'm currently looking for opportunities to learn and grow as a frontend
-                            developer. Whether you want to discuss projects, internships or collaborate on ideas, feel
-                            free to reach out. I'm happy to connect and share my work with you.</p>
+                        <p class="contact-desc">I'm currently looking for freelance clients and engineering teams to work with. If you need a reliable developer to bring your layouts to life or integrate your database structures, feel free to send a message!</p>
 
                         <div class="contact-details">
                             <div class="contact-item">
@@ -533,7 +604,7 @@
                                 </div>
                                 <div class="detail-text">
                                     <span>Email Me</span>
-                                    <a href="tamoortemii@gmail.com">tamoortemii@gmail.com</a>
+                                    <a href="mailto:tamoortemii@gmail.com">tamoortemii@gmail.com</a>
                                 </div>
                             </div>
 
@@ -543,7 +614,7 @@
                                 </div>
                                 <div class="detail-text">
                                     <span>Call Me</span>
-                                    <a href="03437924815">+92 343-7924815</a>
+                                    <a href="tel:+923437924815">+92 343-7924815</a>
                                 </div>
                             </div>
 
@@ -553,7 +624,7 @@
                                 </div>
                                 <div class="detail-text">
                                     <span>Location</span>
-                                    <p>Bhakkar, Punjab , Pakistan</p>
+                                    <p>Bhakkar, Punjab, Pakistan</p>
                                 </div>
                             </div>
                         </div>
@@ -563,7 +634,7 @@
                             <div class="social-icons">
                                 <a href="https://github.com/Tamoor-Tech" target="_blank" class="social-btn"><i
                                         class="fab fa-github"></i></a>
-                                <a href="https://www.linkedin.com/in/tamoor-shahzad-full-stack-developer-1530173aa?utm_source=share&utm_campaign_via&utm_content=profile&utm_medium=android_app"
+                                <a href="https://www.linkedin.com/in/tamoor-shahzad-full-stack-developer-1530173aa"
                                     target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
                                 <a href="https://www.facebook.com/share/17acTuosrE/" target="_blank"
                                     class="social-btn"><i class="fab fa-facebook"></i></a>
@@ -575,27 +646,28 @@
 
                     <!-- Contact Form Column -->
                     <div class="contact-form-col">
-                        <form class="contact-form">
+                        <form id="contact-form" class="contact-form">
                             <div class="form-grid">
                                 <div class="input-group">
-                                    <input type="text" required>
-                                    <label>Name</label>
+                                    <input type="text" id="contact-name" name="name" required>
+                                    <label for="contact-name">Name</label>
                                 </div>
                                 <div class="input-group">
-                                    <input type="email" required>
-                                    <label>Email</label>
+                                    <input type="email" id="contact-email" name="email" required>
+                                    <label for="contact-email">Email</label>
                                 </div>
                             </div>
                             <div class="input-group">
-                                <input type="text" required>
-                                <label>Subject</label>
+                                <input type="text" id="contact-subject" name="subject" required>
+                                <label for="contact-subject">Subject</label>
                             </div>
                             <div class="input-group">
-                                <textarea required></textarea>
-                                <label>Message</label>
+                                <textarea id="contact-message" name="message" required></textarea>
+                                <label for="contact-message">Message</label>
                             </div>
                             <button type="submit" class="btn btn-primary">Send Message <i
                                     class="fas fa-paper-plane"></i></button>
+                            <div id="contact-status" class="contact-status-msg"></div>
                         </form>
                     </div>
 
@@ -605,30 +677,30 @@
     </section>
 
     <!-- Footer -->
-    <!-- Footer -->
     <footer class="footer">
         <div class="container footer-content">
             <div class="footer-logo">
                 <h2>Tamoor <span>Shahzad</span></h2>
-                <p>Frontend Developer in progress, passionate about building clean, responsive and user-friendly web
-                    interfaces. Always learning and open to collaborations or internship opportunities.</p>
+                <p>Professional MERN Stack Developer specializing in clean, high-performance web applications, responsive user interfaces, and custom database integrations.</p>
             </div>
             <div class="footer-links">
                 <h3>Quick Links</h3>
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
+                <a href="#services">Services</a>
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
+                <a href="#process">Process</a>
+                <a href="#faq">FAQ</a>
                 <a href="#contact">Contact</a>
-                <a href="resume.html">Resume</a>
             </div>
             <div class="footer-social">
                 <h3>Connect</h3>
                 <div class="social-icons-footer">
                     <a href="https://github.com/Tamoor-Tech" target="_blank" class="social-btn-sm"><i
                             class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/tamoor-shahzad-full-stack-developer-1530173aa?utm_source=share&utm_campaign_via&utm_content=profile&utm_medium=android_app"
-                        target="_blank" class="social-btn-sm"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/tamoor-shahzad-full-stack-developer-1530173aa"
+                        target="_blank" class="social-btn-sm"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://www.facebook.com/share/17acTuosrE/" target="_blank" class="social-btn-sm"><i
                             class="fab fa-facebook"></i></a>
                     <a href="https://x.com/TamoorTemi" target="_blank" class="social-btn-sm"><i
@@ -641,6 +713,16 @@
             <a href="#home" class="scroll-top"><i class="fas fa-arrow-up"></i></a>
         </div>
     </footer>
+
+    <!-- Dynamic Case Study Modal Overlay -->
+    <div id="project-modal" class="modal-overlay">
+        <div class="modal-card glass-card">
+            <button class="modal-close-btn" id="modal-close">&times;</button>
+            <div class="modal-body" id="modal-body-content">
+                <!-- Data populated dynamically via JS -->
+            </div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
